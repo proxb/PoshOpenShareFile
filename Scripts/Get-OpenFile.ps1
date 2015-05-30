@@ -31,7 +31,7 @@
             If ($Return -eq 0) {
                 $CurrentFile = New-Object FILE_INFO_3
                 For ($i=0; $i -lt $ReadEntries; $i++) {
-                    $Pointer = New-Object IntPtr -ArgumentList ($Buffer.ToInt32() + $i * [System.Runtime.InteropServices.Marshal]::SizeOf($CurrentFile))
+                    $Pointer = New-Object IntPtr -ArgumentList ($Buffer.ToInt64() + $i * [System.Runtime.InteropServices.Marshal]::SizeOf($CurrentFile))
                     $CurrentFile = [System.Runtime.InteropServices.Marshal]::PtrToStructure($Pointer, [type][FILE_INFO_3])
                     $Object = [pscustomobject]@{
                         Computername = $Computer
