@@ -7,6 +7,7 @@ Get-OpenFile
 Close-OpenFile
 ```
 
+Running PowerShell V5? Then just run the following command to install the module:
 ```PowerShell
 Install-Module -Name PoshOpenShareFile
 ```
